@@ -25,7 +25,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 counter++;
-                szamlalo.setText(counter);
+                //string.valueof
+                szamlalo.setText(String.valueOf(counter));
                 if (counter<0) {
                     szamlalo.setTextColor(Color.RED);
                 } else {
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 counter--;
-                szamlalo.setText(counter);
+                szamlalo.setText(String.valueOf(counter));
                 if (counter<0) {
                     szamlalo.setTextColor(Color.RED);
                 } else {
