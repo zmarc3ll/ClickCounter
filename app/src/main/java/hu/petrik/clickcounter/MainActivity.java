@@ -42,9 +42,16 @@ public class MainActivity extends AppCompatActivity {
                 szamlalo.setText(String.valueOf(counter));
                 if (counter<0) {
                     szamlalo.setTextColor(Color.RED);
-                } else {
+                }else{
                     szamlalo.setTextColor(Color.GREEN);
                 }
+            }
+        });
+        szamlalo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                szamlalo.setText(String.valueOf(0));
+                szamlalo.setTextColor(Color.BLUE);
             }
         });
     }
