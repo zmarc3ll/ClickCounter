@@ -25,13 +25,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 counter++;
-                //string.valueof
                 szamlalo.setText(String.valueOf(counter));
                 if (counter<0) {
                     szamlalo.setTextColor(Color.RED);
-                } else {
+                }else if(counter==0){
+                    szamlalo.setTextColor(Color.BLUE);
+                }else{
                     szamlalo.setTextColor(Color.GREEN);
                 }
+
             }
         });
 
@@ -42,15 +44,18 @@ public class MainActivity extends AppCompatActivity {
                 szamlalo.setText(String.valueOf(counter));
                 if (counter<0) {
                     szamlalo.setTextColor(Color.RED);
+                }else if(counter==0){
+                    szamlalo.setTextColor(Color.BLUE);
                 }else{
                     szamlalo.setTextColor(Color.GREEN);
                 }
+
             }
         });
         szamlalo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                szamlalo.setText(String.valueOf(0));
+                szamlalo.setText(String.valueOf(counter=0));
                 szamlalo.setTextColor(Color.BLUE);
             }
         });
